@@ -11,24 +11,93 @@ body {
 	font-family: 'Noto Sans';
 }
 
+p {
+	font-size: 14px;
+	line-height: 24px;
+	color: #828282;
+}
+
+.subtitle_text {
+	font-size: 14px;
+	line-height: 24px;
+	color: #828282;
+	margin-top: 0;
+	margin-bottom: 50px;
+}
+
 .heading {
-	font-size: 28px;
 	color: #333;
+	font-size: 28px;
+	margin-bottom: 30px;
 	font-weight: 700;
 	margin-top: 0;
-	margin-bottom: 30px;
+	position: relative;
 	
-	@media (min-width: 1200px){
+	@media (min-width: 1200px) {
 		font-size: 38px;
 		margin-bottom: 40px;
 	}
+
+	
+	&--smaller-margin {
+		margin-bottom: 20px;
+		// margin-top: 43px;
+	}
+
+	&--number:before {
+		height: 26px;
+		width: 26px;
+		display: block;
+		-webkit-border-radius: 13px;
+		        border-radius: 13px;
+		background-color: #FFC80A;
+		color: #fff;
+		font-size: 16px;
+		font-weight: 700;
+		padding-top: 4.5px;
+		padding-left: 2px;
+		position: absolute;
+		left: 35px;
+		top: -40px;
+		content: "0";
 		
+		@media (min-width: 1200px) {
+			left: -10px;
+			top: -25px;
+		}
+		
+	}
+
+	&--number-1:before {
+		content: "1";
+	} 
+
+	&--number-2:before {
+		content: "2";
+		left: 40px;
+	} 
+
 
 }
 
 .section {
-	padding-top: 60px;
-	padding-bottom: 67px;
+	padding-top: 43px;
+	padding-bottom: 50px;
+	
+	@media (min-width: 1170px) {
+		padding-top: 70px;
+		padding-bottom: 80px;
+	}
+	
+	&--p-t-70 {
+		padding-top: 70px;
+	}
+	
+	&--m-p-b-0 {
+		@media (min-width: 992px) {
+			padding-bottom: 0;
+		}
+	}
 }
 
 .block {
